@@ -1,0 +1,110 @@
+#include<bits/stdc++.h> : include every library
+
+cout<<fixed<<setprecision(9)<<a1<<endl; : for precision of decimal upto given terms
+
+in c programming array and pointer of structure is special case in which when passing & will not be used:
+struct jas
+{
+int j;
+};
+void print(int *p)
+{
+printf("%d",*p);
+}
+int main()
+{
+struct jas obj,*p;
+p=&obj;
+print(p);
+}
+
+To check the length of number:
+int n=(int)log10(num)
+
+pointer array: to define new float [n]
+to add terms :ptr[i] or *(ptr + i)
+ and to delete ptr : delete[]ptr;
+
+*in multi heirarchy: we can use obj.base1::display if we have function with same name.
+
+#include <iostream>
+
+using namespace std;
+
+class base1
+
+{
+
+public :
+
+
+
+ void  display()
+
+{ 
+
+  cout <<"\n this is base 1 display   function \n ";
+
+
+
+}
+
+};
+
+
+
+class base2 
+
+{
+
+public : 
+
+void display()
+
+{
+
+  cout <<"\n this is class base2 display function\n";
+
+}
+
+};
+
+class P : public base1 , public base2
+
+{
+
+  public : 
+
+
+
+  void display ()
+
+  {
+
+    base2::display();
+
+    base1::display();
+
+  }
+
+  
+
+
+
+};
+
+int main() 
+
+{
+
+ P obj ;
+
+ obj.display();
+
+ 
+
+ // compiler error 
+
+
+
+}
